@@ -1,0 +1,351 @@
+﻿body {
+    background: #f8f8f8;
+}
+
+.profile-area {
+    padding: 10px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-4{
+    padding-left:15px;
+    padding-bottom:20px;
+}
+
+.card {
+    background:#fff;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    height:550px;
+}
+
+.img1 img {
+    height: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+
+.img2 img {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+    margin-top: -80px;
+}
+
+.card:hover .img2 img {
+    border-color: darkcyan;
+    transition: 0.7s;
+}
+
+.main-text {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.main-text p {
+    font-size: 16px;
+    padding: 0 35px;
+}
+
+.socials {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top:10px;
+}
+
+.socials i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background:  #4568DC;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.socials i:hover {
+    color:  #4568DC;
+    background: transparent;
+    transform: scale(2);
+}
+
+.socials a {
+    text-decoration:none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background:  #4568DC;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.socials a:hover {
+    color:  #4568DC;
+    background: transparent;
+    transform: scale(2);
+}
+
+.socials a.red {
+    text-decoration:none;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background:  red;
+    line-height: 40px;
+    border-radius: 50%;
+    margin: 2px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.socials a.red:hover {
+    color:  red;
+    background: transparent;
+    transform: scale(2);
+}
+
+.search-bar input,
+.search-btn,
+.search-btn:before,
+.search-btn:after {
+    transition: all 0.5s ease-out;
+}
+
+.search-bar input,
+.search-btn {
+    width: 3em;
+    height: 3em;
+}
+
+.search-bar input:invalid:not(:focus),
+.search-btn {
+    cursor: pointer;
+}
+
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid {
+    width: 80%;
+}
+
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+    outline: transparent;
+}
+
+.search-bar {
+    display: inline-flex;
+    margin-left: 8%;
+    padding: 5px;
+    justify-content: right;
+    max-width: 20%;
+}
+
+.search-bar input {
+    background: transparent;
+    border-radius: 1.5em;
+    box-shadow: 0 0 0 0.4em #171717 inset;
+    padding: 0.75em;
+    transform: translate(0.5em,0.5em) scale(0.5);
+    transform-origin: 100% 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.search-bar input::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.search-bar input:focus,
+.search-bar input:valid {
+    background: #fff;
+    border-radius: 0.375em 0 0 0.375em;
+    box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+    transform: scale(1);
+}
+
+.search-btn {
+    background: #171717;
+    border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+    padding: 0.75em;
+    position: relative;
+    transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+    transform-origin: 0 50%;
+}
+
+.search-btn:before,
+.search-btn:after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+}
+
+.search-btn:before {
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+    top: 0.75em;
+    left: 0.75em;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.search-btn:after {
+    background: #f1f1f1;
+    border-radius: 0 0.25em 0.25em 0;
+    top: 51%;
+    left: 51%;
+    width: 0.75em;
+    height: 0.25em;
+    transform: translate(0.2em,0) rotate(45deg);
+    transform-origin: 0 50%;
+}
+
+.search-btn span {
+    display: inline-block;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+}
+
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+    background:  #4568DC;
+    border-radius: 0 0.375em 0.375em 0;
+    transform: scale(1);
+}
+
+.search-bar input:focus + .search-btn:before,
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before,
+.search-bar input:valid + .search-btn:after {
+    opacity: 1;
+}
+
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+    background: #254fdb;
+}
+
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+    transform: translateY(1px);
+}
+
+.soc {
+    padding: 30px 5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+ul {
+  position:absolute;
+  top:75%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ul li {
+  list-style: none;
+  padding:2px;
+}
+
+ul li a {
+  position: relative;
+  width:50px;
+  height:50px;
+  display:block;
+  text-align:center;
+  margin:5px;
+  border-radius: 50%;
+  padding: 3px;
+  box-sizing: border-box;
+  text-decoration:none;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: .5s;
+}
+
+ul li a:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-decoration:none;
+}
+
+ul li a .fab {
+  width: 100%;
+  height:100%;
+  display:block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size:24px;
+  color: #262626;
+  transition: .5s;
+}
+
+ul li:nth-child(1) a:hover .fab {
+  color: #3b5998;
+}
+
+ul li:nth-child(2) a:hover .fab {
+    color: #dd4b39;
+}
+
+ul li:nth-child(3) a:hover .fab {
+    color: #007bb6;
+}
+
+ul li:nth-child(4) a:hover .fab {
+  color: #e4405f;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body, input {
+        color: #f1f1f1;
+    }
+
+    body {
+        background: #171717;
+    }
+
+    .search-bar input {
+        box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+    }
+
+    .search-bar input:focus,
+    .search-bar input:valid {
+        background: #3d3d3d;
+        box-shadow: 0 0 0 0.1em #3d3d3d inset;
+    }
+
+    .search-btn {
+        background: #f1f1f1;
+    }
+}
